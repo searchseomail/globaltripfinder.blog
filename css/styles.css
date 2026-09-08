@@ -1,0 +1,86 @@
+/* THEME 4: WARM RETRO EDITORIAL */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap');
+
+:root {
+  --bg-main: #f7f3ec;
+  --bg-card: #eee8de;
+  --bg-header: #f7f3ec;
+  --accent: #d85a38;
+  --accent-dark: #2c2523;
+  --text-main: #2c2523;
+  --text-gray: #716761;
+  --border-color: #dfd7cb;
+  --font-main: 'Plus Jakarta Sans', sans-serif;
+  --font-heading: 'Fraunces', serif;
+  --shadow-sm: 0 4px 12px rgba(44, 37, 35, 0.04);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body { 
+  font-family: var(--font-main); 
+  background-color: var(--bg-main); 
+  color: var(--text-gray); 
+  line-height: 1.7; 
+  display: flex; flex-direction: column; min-height: 100vh; 
+}
+
+a { text-decoration: none; color: inherit; transition: color 0.2s ease; }
+a:hover { color: var(--accent); }
+
+h1, h2, h3, h4 { color: var(--text-main); font-family: var(--font-heading); font-weight: 600; }
+
+.container { max-width: 1200px; margin: 0 auto; padding: 0 25px; width: 100%; }
+
+.site-header { 
+  background: var(--bg-header); 
+  border-bottom: 2px solid var(--border-color); 
+  position: sticky; top: 0; z-index: 100;
+}
+.header-top { display: flex; justify-content: space-between; align-items: center; padding: 22px 25px; max-width: 1200px; margin: 0 auto; }
+.logo { font-size: 1.9rem; font-family: var(--font-heading); font-weight: 700; color: var(--accent); }
+
+.header-nav { background: #ede6da; border-bottom: 2px solid var(--border-color); }
+.nav-links { display: flex; justify-content: center; gap: 35px; padding: 12px 20px; }
+.nav-links a { color: var(--text-main); font-weight: 600; font-size: 0.9rem; }
+
+.bottom-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 30px; margin: 60px 0; }
+
+.post-thumb-card { 
+  position: relative; background: var(--bg-card); 
+  border: 2px solid var(--border-color); 
+  border-radius: 20px; 
+  display: flex; flex-direction: column; justify-content: space-between; 
+  padding: 30px; transition: transform 0.3s ease, border-color 0.3s ease; 
+  box-shadow: var(--shadow-sm); 
+  min-height: 260px; 
+}
+.post-thumb-card:hover { transform: translateY(-4px); border-color: var(--accent); }
+
+.cat-badge { 
+  background: #f7f3ec; 
+  color: var(--accent); border: 1px solid var(--border-color);
+  padding: 5px 14px; font-size: 0.75rem; font-weight: 600; 
+  border-radius: 50px; display: inline-block; margin-bottom: 20px; width: fit-content; 
+}
+
+.post-thumb-title { color: var(--text-main); font-size: 1.3rem; line-height: 1.35; font-family: var(--font-heading); }
+
+.post-container { max-width: 800px; margin: 50px auto; background: var(--bg-card); padding: 50px; border-radius: 24px; border: 2px solid var(--border-color); box-shadow: var(--shadow-sm); }
+.post-h1 { font-size: 3rem; line-height: 1.15; margin-bottom: 20px; }
+.post-meta-info { display: flex; align-items: center; gap: 15px; border-bottom: 1px solid var(--border-color); padding-bottom: 20px; margin-bottom: 30px; font-size: 0.95rem; }
+.post-meta-info img { width: 44px; height: 44px; border-radius: 50%; border: 2px solid var(--accent); }
+.post-content { font-size: 1.1rem; line-height: 1.9; color: #433934; }
+.post-content h2 { font-size: 2rem; margin: 40px 0 15px; }
+.post-content p { margin-bottom: 20px; }
+.post-content a { color: var(--accent); text-decoration: underline; }
+
+.pagination { display: flex; justify-content: center; gap: 10px; margin: 30px 0 70px; }
+.page-link { width: 42px; height: 42px; display: flex; justify-content: center; align-items: center; border: 2px solid var(--border-color); background: var(--bg-card); border-radius: 50%; font-weight: 600; color: var(--text-main); }
+.page-link:hover { border-color: var(--accent); color: var(--accent); }
+.page-link.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+
+.site-footer { background: #2c2523; color: #d6cbbf; padding: 70px 0 30px; margin-top: auto; }
+.footer-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; max-width: 1200px; margin: 0 auto; padding: 0 25px; }
+.footer-title { margin-bottom: 20px; font-family: var(--font-heading); font-size: 1.2rem; color: #f7f3ec; }
+.footer-bottom { text-align: center; margin-top: 50px; padding-top: 25px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.85rem; color: #8e8076; }
